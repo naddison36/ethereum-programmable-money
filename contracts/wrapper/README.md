@@ -19,6 +19,7 @@ Use an intermediate contract to hold the underlying tokens which only the wrappe
 
 ## Technical Artifacts
 * [wrapperToken.sol](./wrapperToken.sol) solidity code for the ERC20 wrapper contract
+* [tokenTransferer.sol](./tokenTransferer.sol) solidity code for the temporary contract to transfer tokens from the underlying token contract to the wrapper contract
 * [WrapperToken.abi](../../bin/contracts/wrapper/WrapperToken.abi) Application Binary Interface definition of the wrapper contract.
 * [WrapperToken.bin](../../bin/contracts/wrapper/WrapperToken.bin) Binary in hex format of the wrapper contract
 
