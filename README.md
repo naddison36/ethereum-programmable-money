@@ -8,6 +8,7 @@ A payment is the transfer of an amount of money from a sender to a receiver at a
 
 ## Properties of programmable money
 Programmable money having the following properties:
+
 ### The attributes of a payment can be codified.
 The ability to dynamically calculate when a payment is sent, the amount, the sender and the receiver. This is not unique to programmable money. Tradition payment instructions also have  this ability.
 

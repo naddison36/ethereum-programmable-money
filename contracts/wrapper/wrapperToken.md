@@ -11,9 +11,9 @@ The externally owned account can't directly transfer control to the wrapper cont
 You could allow the tokens to be transferred by the wrapper contract but that means anyone can claim those tokens in the wrapper contract.
 
 ## Solution
-Use an intermediate contract to hold the underlying tokens which only the wrapper contract can then transfer to itself.
+Use an intermediate contract to hold the underlying tokens which only the wrapper contract can then transfer the underlying tokens to itself.
 
-1. The externally owned account call the wrapper contract to create a new holding token
-2. The externally owned account calls the underlying contract to transfer the underlying tokens to the ownership of the holding contract
-3. The externally owned account calls the wrapper contract which then calls the holding contract to transfer the underlying tokens from the holding contract to the wrapper contract
+1. The issuer calls the wrapper contract to create a new token transferer contract that is associated with the issuer in the wrapper contract.
+2. The issuer calls the underlying contract to transfer the underlying tokens to transferer contract.
+3. The issuer calls the wrapper contract which then calls the transferer contract to transfer the underlying tokens from the transferer contract to the wrapper contract.
 

@@ -10,7 +10,7 @@ See MIT Licence for further details.
 
 pragma solidity ^0.4.15;
 
-contract TransferToken
+contract Token
 {
     /* State */
     // The Total supply of tokens
@@ -35,8 +35,7 @@ contract TransferToken
 /* Funtions Public */
 
     // Constructor
-    function TransferToken(string tokenSymbol, string tokenName)
-    {
+    function Token(string tokenSymbol, string tokenName) {
         sym = tokenSymbol;
         nam = tokenName;
     }
@@ -64,8 +63,7 @@ contract TransferToken
     }
 
     // Send amount amount of tokens to address _to
-    function transfer(address toAddress, uint256 amount) public
-    {
+    function transfer(address toAddress, uint256 amount) public {
         address fromAddress = msg.sender;
         require(amount <= balance[fromAddress]);
         balance[fromAddress] -= amount;

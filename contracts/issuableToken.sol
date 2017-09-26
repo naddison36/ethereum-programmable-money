@@ -10,14 +10,17 @@ See MIT Licence for further details.
 
 pragma solidity ^0.4.15;
 
-import {TransferToken} from "./TransferToken.sol";
+import {Token} from "./token.sol";
 
-contract IssuableTransferToken is TransferToken
+contract IssuableToken is Token
 {
     address owner;
 
     // constructor
-    function IssuableTransferToken(string symbol, string name) TransferToken(symbol, name) {
+    function IssuableToken(string symbol, string name)
+        // call constructor of base contract
+        Token(symbol, name)
+    {
         owner = msg.sender;
     }
     
