@@ -27,7 +27,7 @@ The payment constraints can be applied based on data that is not part of the pay
 ### Constraints can be added and removed
 Payment constraints can either be maintained as money moves to different token holders or they can be removed depending on the use case. For example, a constraint could be applied so money can only be transferred to a limited set of receivers at all times. Or it could be money is restricted to a limited set of receivers for one transfer only. The receiver of the transfer is then free to transfer that money to whoever they like.
 
-## Constraints can be extended
+### Constraints can be extended
 Programmable money can be extended to include new constraints without losing the existing constraints. As its base you can take unrestricted programmable money and extend it to include a set of constraints. For example, it can only be spent after a fixed period of time. This can then be further extended to include constraints like . For example, the money it can only be transferred to a limited set of receivers.
 
 ### Atomic transactions
