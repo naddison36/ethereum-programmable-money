@@ -33,7 +33,7 @@ Programmable money can be extended to include new constraints without losing the
 ### Atomic transactions
 Programs can orchestrate the exchange of digital assets and money between multiple parties for different amounts in one atomic transaction. Atomic transactions mean all payments are executed or none at all. This is often implemented in a smart contract which ensures transactions that involve the exchange of digital assets are valid.
 
-### Is directly controlled
+### Directly controlled
 Programmable money is directly controlled by people or things without needing to instruct an intermediary. In practical terms, this is the ability to sign and broadcast transactions directly to the digital platform. In traditional payment systems, instructions are sent to a financial institution who then execute the payment in closed payment schemes. This exposes the customer to risk of default of the financial institutions involved in the payment or their funds being frozen.
 
 ## Why programmable money?
