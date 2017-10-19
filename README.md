@@ -1,32 +1,40 @@
 Ethereum Implementation of Programmable Money
 =============================================
 
-## What is money?
-Money is an accepted medium of exchange for goods and services. In Australia, the accepted medium of exchange is the Australian dollar.
+Programable money is attaching conditions to the transfer of money backed tokens. The transfer of tokens from a sender to a receiver, or a more complicated exchange of other asset backed tokens in one atomic transaction.
 
-A payment is the transfer of an amount of money from a sender to a receiver at a point in time.
+## Definitions
+*Money* is an accepted medium of exchange for goods and services. In Australia, the accepted medium of exchange is the Australian dollar.
+
+A *payment* is the transfer of an amount of money from a sender to a receiver at a point in time.
+
+A *token* is a right to some asset held by the token issuer. The token holder deposits an asset with the token issuer who in turn increases the balance of the token holder's token balance by an agreed asset to token exchange rate. The token holder can then transfer some or all of their tokens to others without the need of an intermediary. See Anthony Lewis's blog [A gentle introduction to tokens](https://bitsonblocks.net/2015/09/28/a-gentle-introduction-to-digital-tokens/) for more details.
+
+An [Ethereum](https://www.ethereum.org/) [ERC20](https://github.com/ethereum/EIPs/issues/20) token conforms to the published token standard. This includes data and functions like balanceOf and transfer that the token must implement. This standard allows different wallets, exchanges, blockchain explorers and smart contracts to interact with tokens.
 
 ## Properties of programmable money
-Programmable money having the following properties:
 
-### The attributes of a payment can be codified.
-The ability to dynamically calculate when a payment is sent, the amount, the sender and the receiver. This is not unique to programmable money. Tradition payment instructions also have  this ability.
+### Constraints can be applied to attributes of a payment
+These conditions include restricting when a payment can be made, the amount that can be sent, the authorised sender or the allowed recipients of money. For example:
+* *when*: only transfer before or after a point in time
+* *amount*: only transfer a min or max amount
+* *sender*: only a subset of token holders can transfer
+* *receiver*: only a subset of token holders can receive tokens. This effectively limits who the token can be transferred to
 
-### Constraints can be placed on the attributes of a payment.
-These conditions include restricting when a payment can be made, the amount that can be sent, the authorised sender or the allowed recipients of money. These conditions are introduced by the sender of the money and can not be removed by the receiver.
-Programmable money can be extended to include new constraints without losing the existing constraints. As its base you can take unrestricted programmable money and extend it to include a set of constraints. For example, can only be spent after a fixed period of time. This can then be further extended. For example, the money can only be transferred to a limited set of receivers.
+### Constraints can be based on non-payment data
+The payment constraints can be applied based on data that is not part of the payment. In blockchain terms, data can be made available via Oracles which are how external data is made available on a blockchain. Examples include prices (currency, commodity, shares, goods and services), observations (news, weather) or an event in a business process (supply chain, manufacturing or services).
+
+### Constraints can be added and removed
+Payment constraints can either be maintained as money moves to different token holders or they can be removed depending on the use case. For example, a constraint could be applied so money can only be transferred to a limited set of receivers at all times. Or it could be money is restricted to a limited set of receivers for one transfer only. The receiver of the transfer is then free to transfer that money to whoever they like.
+
+## Constraints can be extended
+Programmable money can be extended to include new constraints without losing the existing constraints. As its base you can take unrestricted programmable money and extend it to include a set of constraints. For example, it can only be spent after a fixed period of time. This can then be further extended to include constraints like . For example, the money it can only be transferred to a limited set of receivers.
 
 ### Atomic transactions
 Programs can orchestrate the exchange of digital assets and money between multiple parties for different amounts in one atomic transaction. Atomic transactions mean all payments are executed or none at all. This is often implemented in a smart contract which ensures transactions that involve the exchange of digital assets are valid.
 
-### Conditions can be preserved after a transfer or they can be removed.
-In most cases conditions placed on programmable money will need to be dropped once it has been spent. For example, once a charity has spend the money at approved suppliers, the approved suppliers are free to spend the money wherever they like. When programmable money is being used like a loyalty point, the conditions of use will need to be preserved after it’s been spent.
-
-### Is directly controlled by people or things without needing to instruct an intermediary.
-In practical terms, this is the ability to sign and broadcast transactions directly to the digital platform. In traditional payment systems, instructions are sent to a financial institution who then execute the payment in closed payment schemes. This exposes the customer to risk of default of the financial institutions involved in the payment or their funds being frozen.
-
-### Data can be associated with a payment
-Supplementary data can be associated with a payment which can be used as input to the money programs or simply used for audit or provenance purposes.
+### Is directly controlled
+Programmable money is directly controlled by people or things without needing to instruct an intermediary. In practical terms, this is the ability to sign and broadcast transactions directly to the digital platform. In traditional payment systems, instructions are sent to a financial institution who then execute the payment in closed payment schemes. This exposes the customer to risk of default of the financial institutions involved in the payment or their funds being frozen.
 
 ## Why programmable money?
 The following is a selection of examples of how programmable money could be used. This is by no means exhaustive and is designed to show how the above properties could be used practically.
@@ -56,3 +64,4 @@ Organisations can use programmable money to put conditions on money credited to 
 ### Direct Debits
 Conditions can be placed on money that authorises another party to transfer money from the authorising party for a limited time, amount or number of payments. A classic example is a retail customer authorising a utility to debit them on a periodic basis up to a limited amount for a limited period of time. For example, one payment every month up to $30 for a period of 2 years.
 This authorisation can be withdrawn by the authorisor at any time or might been both parties to sign for the removal of the automated payments.
+
