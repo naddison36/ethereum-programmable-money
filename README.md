@@ -28,7 +28,7 @@ The payment constraints can be applied based on data that is not part of the pay
 Payment constraints can either be maintained as money moves to different token holders or they can be removed depending on the use case. For example, a constraint could be applied so money can only be transferred to a limited set of receivers at all times. Or it could be money is restricted to a limited set of receivers for one transfer only. The receiver of the transfer is then free to transfer that money to whoever they like.
 
 ### Constraints can be extended
-Programmable money can be extended to include new constraints without losing the existing constraints. As its base you can take unrestricted programmable money and extend it to include a set of constraints. For example, it can only be spent after a fixed period of time. This can then be further extended to include constraints like . For example, the money it can only be transferred to a limited set of receivers.
+Programmable money can be extended to include new constraints without losing the existing constraints. You can take unrestricted programmable money and extend it to include a set of constraints. For example, it can only be spent after a fixed period of time. This can then be further extended to include more constraints. For example, the money it can only be transferred to a limited set of receivers.
 
 ### Atomic transactions
 Programs can orchestrate the exchange of digital assets and money between multiple parties for different amounts in one atomic transaction. Atomic transactions mean all payments are executed or none at all. This is often implemented in a smart contract which ensures transactions that involve the exchange of digital assets are valid.
@@ -54,6 +54,9 @@ Conditions can be placed on money raised during a crowd sale that will refund al
 Programmable money can be used to hold funds in a trust that is controlled by a third party. In this case, the condition is on who can send escrow funds. This could be a single party or multiple parties that need an m of n signatures to release the funds.
 
 Examples could be money held in trust until a child reaches a certain age. Another example is collateral for a financial transaction.
+
+### Know Your Client / Anti-Money Laundering
+Constraints can be placed on transfers so only recipients who have been verified by a Know Your Client transaction (KYC) and Anti-Money Laundering (AML) processes can receive money. This can be provided by different providers via Oracles.
 
 ### Auctions
 To reduce the risk of default on auctions, money can be transferred on the condition that all non-winning bids are refunded at the end of the auction. The seller is also assured of payment as the winner’s bid is held in escrow until the end of the auction or when the auctioned good or service is delivered.
